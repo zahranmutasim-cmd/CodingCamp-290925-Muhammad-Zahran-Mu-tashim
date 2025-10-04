@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="id">
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<title>To-Do sederhana</title>
+		<link rel="stylesheet" href="Design.css" />
+	</head>
+	<body>
+		<main class="container">
+			<h1>To-Do List</h1>
+
+			<section class="card form-card">
+				<form id="todoForm" novalidate>
+					<div class="field">
+						<label for="todoInput">Tugas</label>
+						<input id="todoInput" name="todo" type="text" placeholder="Masukkan tugas" required />
+						<small class="error" id="todoError" aria-live="polite"></small>
+					</div>
+
+					<div class="field">
+						<label for="dateInput">Tanggal</label>
+						<input id="dateInput" name="date" type="date" required />
+						<small class="error" id="dateError" aria-live="polite"></small>
+					</div>
+
+					<div class="actions">
+						<button type="submit" id="addBtn" class="btn primary">Tambah</button>
+						<button type="reset" class="btn">Bersihkan</button>
+					</div>
+				</form>
+			</section>
+
+			<section class="card controls-card">
+				<div class="controls">
+					<input id="searchInput" type="search" placeholder="Cari tugas..." />
+					<select id="filterSelect" aria-label="Filter tugas">
+						<option value="all">Semua</option>
+						<option value="today">Hari ini</option>
+						<option value="upcoming">Akan datang</option>
+						<option value="overdue">Terlambat</option>
+					</select>
+				</div>
+			</section>
+
+			<section class="card list-card">
+				<h2>Daftar To-Do</h2>
+				<ul id="todoList" class="todo-list" aria-live="polite"></ul>
+				<p id="emptyState" class="muted">Belum ada tugas. Tambah tugas baru menggunakan formulir di atas.</p>
+			</section>
+		</main>
+
+		<script src="Fungsi.js"></script>
+	</body>
+</html>
+
