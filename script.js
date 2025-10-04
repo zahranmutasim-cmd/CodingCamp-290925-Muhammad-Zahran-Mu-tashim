@@ -1,3 +1,4 @@
+console.log("✅ Script JS berhasil dimuat!");
   
 (function () {
 
